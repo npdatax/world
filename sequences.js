@@ -1,6 +1,6 @@
 // Dimensions of sunburst.
-var width =900;
-var height = 700;
+var width =1000;
+var height = 800;
 var radius = Math.min(width, height) / 2;
 
 // Breadcrumb dimensions: width, height, spacing, width of tip/tail.
@@ -13,7 +13,29 @@ var lcolors = {
     "Americas":"#7b615c",
     "Asia":"#de783b",
     "Europe":"#6ab975",
+    "Oceania":"#a173d1",
+    "Southern_Asia":"#aece6f",
+   "Northern_Europe":"#183bab",
+   "Southern_Europe":"#7a5585",
+   "Northern_Africa":"#571a69",
+   "Polynesia":"#d9bbe9",
+   "Middle_Africa":"#4a5fa9",
+   "Caribbean":"#496b20",
+   "South_America":"#b31aa4",
+   "Western_Asia":"#d69831",
    "Australia_and_New_Zealand":"#a3e897",
+   "Western_Europe":"#d19249",
+   "Eastern_Europe":"#05d754",
+   "Central_America":"#c16415",
+   "Western_Africa":"#d192f3",
+   "Northern_America":"#632279",
+   "Southern_Africa":"#b66ab4",
+   "Eastern_Africa":"#21cc18",
+   "South-Eastern_Asia":"#4910a6",
+   "Eastern_Asia":"#c2cbc2",
+   "Melanesia":"#a71a67",
+   "Micronesia":"#07f46d",
+   "Central_Asia":"#009794"
 };
 
 
@@ -41,8 +63,8 @@ var colors = {
    "Northern_America":"#632279",
    "Southern_Africa":"#b66ab4",
    "Eastern_Africa":"#21cc18",
-   "SouthEastern_Asia":"#4910a6",
-   "Eastern_Asia":"#6c269f",
+   "South-Eastern_Asia":"#4910a6",
+   "Eastern_Asia":"#c2cbc2",
    "Melanesia":"#a71a67",
    "Micronesia":"#07f46d",
    "Central_Asia":"#009794",
@@ -140,7 +162,7 @@ var colors = {
    "Guatemala":"#f971f6",
    "Guernsey":"#11b93a",
    "Guinea":"#777378",
-   "GuineaBissau":"#c05db0",
+   "Guinea-Bissau":"#c05db0",
    "Guyana":"#63cbb7",
    "Haiti":"#6ff88f",
    "Heard_Island_and_McDonald_Islands":"#570925",
@@ -344,7 +366,7 @@ function createVisualization(json) {
   var root = d3.hierarchy(json)
       .sum(function(d) { return d.size; })
       .sort(function(a, b) { return b.value - a.value; });
-  
+
   // For efficiency, filter nodes to keep only those large enough to see.
   var nodes = partition(root).descendants()
       .filter(function(d) {
@@ -576,4 +598,4 @@ function buildHierarchy(csv) {
     }
   }
   return root;
-};
+}; 
