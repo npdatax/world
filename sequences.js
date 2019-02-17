@@ -41,7 +41,7 @@ var colors = {
    "Northern_America":"#632279",
    "Southern_Africa":"#b66ab4",
    "Eastern_Africa":"#21cc18",
-   "South_Eastern_Asia":"#4910a6",
+   "SouthEastern_Asia":"#4910a6",
    "Eastern_Asia":"#6c269f",
    "Melanesia":"#a71a67",
    "Micronesia":"#07f46d",
