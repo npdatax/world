@@ -140,7 +140,7 @@ var colors = {
    "Guatemala":"#f971f6",
    "Guernsey":"#11b93a",
    "Guinea":"#777378",
-   "Guinea-Bissau":"#c05db0",
+   "GuineaBissau":"#c05db0",
    "Guyana":"#63cbb7",
    "Haiti":"#6ff88f",
    "Heard_Island_and_McDonald_Islands":"#570925",
